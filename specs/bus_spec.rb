@@ -7,7 +7,8 @@ class TestBus < Minitest::Test
 
   def setup()
     @bus = Bus.new(22, "Ocean Terminal")
-    @person = Person.new("Matilda", 102)
+    @person1 = Person.new("Matilda", 102)
+    @person2 = Person.new("Bob", 4)
   end
 
   def test_that_bus_drives()
@@ -18,8 +19,15 @@ class TestBus < Minitest::Test
     assert_equal(0, @bus.count_passengers())
   end
 
-  def test_add_person_as_passeneger
-    @bus.add_passenger(@person)
+  def test_add_person_as_passenger
+    @bus.pick_up(@person1)
+    assert_equal(1, @bus.count_passengers())
+  end
+
+  def test_drop_off_passenger
+    @bus.pick_up(@person1)
+    @bus.pick_up(@person2)
+    @bus.drop_off(@person1)
     assert_equal(1, @bus.count_passengers())
   end
 
