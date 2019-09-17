@@ -18,4 +18,8 @@ class Bus
     @passengers.push(new_passenger)
   end
 
+  def drop_off(current_passenger)
+    @passengers.delete(current_passenger)
+  end
+
 end
