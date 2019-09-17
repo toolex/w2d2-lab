@@ -31,4 +31,9 @@ class TestBus < Minitest::Test
     assert_equal(1, @bus.count_passengers())
   end
 
+  def test_bus_emptied
+    @bus.empty()
+    assert_equal(0, @bus.count_passengers)
+  end
+
 end
