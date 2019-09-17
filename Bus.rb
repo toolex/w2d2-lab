@@ -10,4 +10,8 @@ class Bus
     return "Brum brum"
   end
 
+  def count_passengers
+    return @passengers.length()
+  end
+
 end
