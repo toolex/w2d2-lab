@@ -10,7 +10,7 @@ class TestBus < Minitest::Test
   end
 
   def test_that_bus_drives()
-    assert_equal("Brum Brum", @bus.drive())
+    assert_equal("Brum brum", @bus.drive())
   end
 
 end

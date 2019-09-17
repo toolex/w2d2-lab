@@ -6,6 +6,8 @@ class Bus
     @passengers = []
   end
 
-
+  def drive()
+    return "Brum brum"
+  end
 
 end
